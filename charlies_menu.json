@@ -1,0 +1,184 @@
+{
+  "categories": [
+    {
+  "name": "Pizzas",
+  "items": [
+    {"name": "Margherita", "description": "Mozzarella and tomato", "price_small": 79, "price_large": 99},
+    {"name": "Pepperoni", "description": "Mozzarella, spicy pepperoni, feta", "price_small": 90, "price_large": 120},
+    {"name": "Hawaiian", "description": "Mozzarella, ham, and pineapple", "price_small": 90, "price_large": 120},
+    {"name": "Four Cheeses", "description": "Mozzarella, cheddar, Parmesan, Gorgonzola", "price_small": 95, "price_large": 125},
+    {"name": "BBQ Chicken", "description": "BBQ sauce, mozzarella, grilled chicken, pepperdews, pineapple", "price_small": 98, "price_large": 132},
+    {"name": "Pulled Pizza", "description": "Cilantro sauce, mozzarella, pulled pork or beef", "price_small": 92, "price_large": 130},
+    {"name": "The Katia", "description": "Crème fraîche sauce, mozzarella, ham, olives", "price_small": 135, "price_large": 175},
+    {"name": "The Charlie", "description": "Mozzarella, chicken, mushrooms and mustard cream", "price_small": 135, "price_large": 155},
+    {"name": "Brie Me", "description": "Mozzarella, Brie, caramelised onions, rocket", "price_small": 140, "price_large": 170},
+    {"name": "Vegetarian", "description": "Mozzarella, peppers, mushrooms, onions, olives, pineapple, tomato, asparagus", "price_small": 135, "price_large": 179},
+    {"name": "Meat Lovers", "description": "Mozzarella, steak strips, pepperoni, sausage, bacon, ham", "price_small": 145, "price_large": 190},
+    {"name": "Siciliana", "description": "Mozzarella, anchovies, capers, olives", "price_small": 105, "price_large": 138},
+    {"name": "The Donna", "description": "Mozzarella, pastrami, olives", "price_small": 103, "price_large": 132},
+    {"name": "La Greca", "description": "Mozzarella, feta, spinach, olives", "price_small": 103, "price_large": 132},
+    {"name": "Mexicana", "description": "Mozzarella, beef mince, onions, chilies", "price_small": 103, "price_large": 132},
+    {"name": "Miss Piggy", "description": "Mozzarella, bacon, feta, avo", "price_small": 105, "price_large": 140},
+    {"name": "Nacho-Chicken", "description": "Mozzarella, pulled spiced chicken, guacamole, salsa, sour cream", "price_small": 125, "price_large": 159},
+    {"name": "Musheron", "description": "Mozzarella, black mushrooms, garlic, rosemary", "price_small": 105, "price_large": 130},
+    {"name": "Sweet Chilli Chicken", "description": "Mozzarella, sweet chilli chicken, mixed peppers topped with avo", "price_small": 120, "price_large": 150},
+    {"name": "Pepperoni Mushroom", "description": "Mozzarella, pepperoni, mushrooms, onions", "price_small": 115, "price_large": 145}
+  ]
+},
+    {
+      "name": "Pastas",
+      "items": [
+        {"name": "Spaghetti Bolognaise", "description": "Beefy bolognaise in Napolitana sauce", "price": 115},
+        {"name": "Al Fredo", "description": "Mushrooms, ham, parmesan in creamy béchamel", "price": 120},
+        {"name": "Al Chicken", "description": "Chicken breast, mushrooms, onions, olives, feta, Napolitana", "price": 130},
+        {"name": "Four Cheeses Pasta", "description": "Mozzarella, cheddar, Parmesan, Gorgonzola in béchamel", "price": 130},
+        {"name": "Tomashi", "description": "Napolitana sauce with fresh basil", "price": 115},
+        {"name": "Al Veggie", "description": "Mushrooms, onions, peppers, baby marrow in rose sauce", "price": 125},
+        {"name": "Al Fillet", "description": "Fillet strips, mushrooms, olives, Napolitana sauce", "price": 145},
+        {"name": "Charlie’s Pasta", "description": "Chicken, onions, peppers, mushrooms, dijon, béchamel", "price": 140},
+        {"name": "Russian Pasta", "description": "Russian, onions, mushrooms, Napolitana sauce", "price": 140},
+        {"name": "Chicken Liver Pasta", "description": "Chicken livers, onion, garlic, sour cream", "price": 130}
+      ]
+    },
+    {
+      "name": "Sarmies",
+      "items": [
+        {"name": "Pulled Sarmie", "description": "Pulled beef or pork with sauce of your choice", "price": 59}
+      ]
+    },
+    {
+      "name": "Toasties",
+      "items": [
+        {"name": "Cheese", "description": "Cheese toastie", "price": 38},
+        {"name": "Cheese and Tomato", "description": "Classic cheese & tomato toastie", "price": 45},
+        {"name": "Cheese and Ham", "description": "Cheese and ham toastie", "price": 45},
+        {"name": "Chicken Mayo", "description": "Chicken mayo toastie", "price": 45},
+        {"name": "Tuna Mayo", "description": "Tuna mayo toastie", "price": 45}
+      ]
+    },
+    {
+      "name": "Waffles",
+      "items": [
+        {"name": "Plain Jane", "description": "Pasta with tomato, garlic, chili", "price": 80},
+        {"name": "Rainbow Waffle", "description": "Jelly beans, syrup, chocolate nubs, astros & ice cream", "price": 60},
+        {"name": "Bar-One Waffle", "description": "Bar-one sauce and ice cream", "price": 60},
+        {"name": "Banana Caramel Waffle", "description": "Caramel and banana", "price": 50},
+        {"name": "Chocolate Mousse & Ice Cream", "description": "Decadent mousse with ice cream", "price": 60}
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        {"name": "Greek", "description": "Lettuce, tomatoes, onions, cucumber, feta, olives", "price": 80},
+        {"name": "Chicken and Avo", "description": "Salad with chicken strips & avo", "price": 130},
+        {"name": "Beef Strips", "description": "Salad with beef strips & crudites", "price": 125},
+        {"name": "Haloumi and Avo", "description": "Salad with haloumi blocks & avo", "price": 115}
+      ]
+    },
+     {
+      "name": "Kiddos Menu",
+      "items": [
+        {"name": "Mac'n Cheese", "description": "Cheesy macaroni", "price": 35},
+        {"name": "Spag Bol", "description": "Small portion spaghetti bolognaise", "price": 50},
+        {"name": "Fish Fingers 'n Chips", "description": "Crispy fish fingers with chips", "price": 48},
+        {"name": "Chicken Strips 'n Chips", "description": "Chicken strips with chips", "price": 50},
+        {"name": "Cheesy Toastie and Chips", "description": "Cheesy toastie with chips", "price": 48}
+      ]
+    },
+    {
+      "name": "Burgers",
+      "items": [
+        {"name": "Basic Burger", "description": "Beef patty, relish, gherkin, tomato, lettuce", "price": 89},
+        {"name": "Add Cheese", "description": "Cheese topping", "price": 11},
+        {"name": "Add Bacon", "description": "Bacon topping", "price": 23},
+        {"name": "Add Avo", "description": "Avo topping", "price": 23},
+        {"name": "Add Mushrooms", "description": "Mushroom topping", "price": 23},
+        {"name": "Add Caramelised Onions", "description": "Caramelised onions topping", "price": 10}
+      ]
+    },
+    {
+      "name": "Fries",
+      "items": [
+        {"name": "Plain Fries", "description": "Classic golden fries", "price": 25},
+        {"name": "Cheesy Fries", "description": "Fries topped with cheese", "price": 42},
+        {"name": "Cheesy Chilli Fries", "description": "Fries with cheese and chilli", "price": 48},
+        {"name": "Cheese and Bacon Fries", "description": "Fries with cheese and bacon", "price": 50}
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {"name": "Ice Cream Cone", "description": "Ice cream sugar cone", "price": 20},
+        {"name": "Ice Cream with Flake", "description": "Soft serve with chocolate flake", "price": 30},
+        {"name": "Ice Cream & Bar-One Sauce", "description": "Topped with bar-one sauce", "price": 28}
+      ]
+    },
+    {
+      "name": "Cold Beverages",
+      "items": [
+        {"name": "Soft Drinks", "description": "Coke, Sprite, Fanta, Coke Zero, etc.", "price": 23},
+        {"name": "Iced Teas", "description": "Lemon, Peach", "price": 28},
+        {"name": "Appletiser/Grapetiser", "description": "Sparkling fruit juice", "price": 28},
+        {"name": "Cappy Fruit Juice", "description": "Various fruit juices", "price": 24},
+        {"name": "Still Water", "description": "Bottled water", "price": 18},
+        {"name": "Sparkling Water", "description": "Carbonated water", "price": 20},
+        {"name": "Soda / Tonic / Ginger Ale", "description": "Various mixers", "price": 18},
+        {"name": "Lemonade / Dry Lemon", "description": "Classic mixers", "price": 23},
+        {"name": "Granadilla or Lemon Twist", "description": "Twist cold drinks", "price": 23},
+        {"name": "Milkshakes", "description": "Various flavours", "price": 30}
+      ]
+    },
+    {
+      "name": "Hot Beverages",
+      "items": [
+        {"name": "Americano", "description": "Classic black coffee", "price": 28},
+        {"name": "Cappuccino", "description": "Espresso with steamed milk and foam", "price": 31},
+        {"name": "Chai Latte", "description": "Spiced tea with milk", "price": 30},
+        {"name": "Dirty Chai Latte", "description": "Chai with a shot of espresso", "price": 33},
+        {"name": "Mochachino", "description": "Coffee with chocolate", "price": 33},
+        {"name": "Caffe Latte", "description": "Milkier espresso drink", "price": 31},
+        {"name": "Hot Chocolate / Milo / Chocochino", "description": "Sweet warm drinks", "price": 36},
+        {"name": "Tea", "description": "Five Roses, Rooibos, Earl Grey, Green Tea", "price": 25},
+        {"name": "Espresso Single", "description": "Single espresso shot", "price": 23},
+        {"name": "Espresso Double", "description": "Double espresso shot", "price": 27}
+      ]
+    },
+    {
+      "name": "Alcoholic Beverages",
+      "items": [
+        {"name": "Castle / Castle Lite / Black Label / Hansa / Amstel", "description": "Local beers", "price": 31},
+        {"name": "Windhoek", "description": "Premium lager", "price": 35},
+        {"name": "Windhoek Draught", "description": "Draught beer", "price": 41},
+        {"name": "Heineken", "description": "International lager", "price": 34},
+        {"name": "Stella Artois", "description": "Premium beer", "price": 40},
+        {"name": "Hunters Gold / Dry", "description": "Classic cider", "price": 34},
+        {"name": "Hunters Extreme / Savanna Dry / Light", "description": "Ciders", "price": 38},
+        {"name": "Brutal Fruit Apple / Litchi / Strawberry", "description": "Coolers", "price": 32},
+        {"name": "Bernini Classic / Blush", "description": "Flavoured alcohol drink", "price": 32},
+        {"name": "Smirnoff Spin / Storm", "description": "Flavoured vodka coolers", "price": 34},
+        {"name": "Flying Fish Lemon / Dry Apple", "description": "Fruit beer options", "price": 34},
+        {"name": "Red Square Silver", "description": "Vodka energy drink", "price": 42}
+      ]
+    },
+    {
+      "name": "Shots",
+      "items": [
+        {"name": "Captain Morgan / Red Heart / Malibu / Klipdrift / Richelieu / Smirnoff Vodka / Bells", "description": "Popular spirits", "price": 20},
+        {"name": "J&B", "description": "Whisky shot", "price": 22},
+        {"name": "Southern Comfort", "description": "Liqueur shot", "price": 32},
+        {"name": "Tequila Silver / Gold / Jager / Jack Daniels / Tanqueray Gin", "description": "Premium shots", "price": 25}
+      ]
+    },
+    {
+      "name": "Wines",
+      "items": [
+        {"name": "Pierre Jordaan Tranquille", "description": "Bottle wine", "price": 43},
+        {"name": "Nederburg Chardonnay / Sauvignon Blanc", "description": "White wine bottles", "price": 42},
+        {"name": "Nederburg Baronne / Cabernet Sauvignon", "description": "Red wine bottles", "price": 50},
+        {"name": "Nederburg Rose / Robertson Rose", "description": "Rose bottles", "price": 45},
+        {"name": "House Wine Glass - Red / White / Rose", "description": "Per glass", "price": 35}
+      ]
+    }
+
+  ]
+}
