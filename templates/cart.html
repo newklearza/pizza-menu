@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Order</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold text-center mb-6">🛒 Your Order</h1>
+
+    {% if cart %}
+    <table class="w-full text-left border-collapse bg-white rounded shadow mb-6">
+      <thead>
+        <tr class="bg-gray-200 text-gray-700">
+          <th class="p-3">Item</th>
+          <th class="p-3">Options</th>
+          <th class="p-3">Qty</th>
+          <th class="p-3">Unit Price</th>
+          <th class="p-3">Line Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% set total = 0 %}
+        {% for item in cart %}
+        {% set item_total = (item.price * item.quantity) %}
+        {% set total = total + item_total %}
+        <tr class="border-t">
+          <td class="p-3 font-medium">{{ item.name }}</td>
+          <td class="p-3 text-sm">
+            {{ item.options or "None" }}
+          </td>
+          <td class="p-3">{{ item.quantity }}</td>
+          <td class="p-3">R{{ "%.2f"|format(item.price) }}</td>
+          <td class="p-3">R{{ "%.2f"|format(item_total) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="text-right text-xl font-bold mb-4">
+      Total: R{{ "%.2f"|format(total) }}
+    </div>
+
+    <div class="flex justify-between">
+      <a href="{{ url_for('index') }}" class="bg-blue-600 text-white px-4 py-2 rounded">➕ Add More Items</a>
+      <a href="{{ url_for('checkout') }}" class="bg-green-600 text-white px-4 py-2 rounded">✅ Place Order</a>
+    </div>
+    {% else %}
+    <p class="text-center text-lg">Your cart is empty.</p>
+    <div class="text-center mt-4">
+      <a href="{{ url_for('index') }}" class="bg-blue-600 text-white px-4 py-2 rounded">Back to Menu</a>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
