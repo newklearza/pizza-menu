@@ -1,0 +1,91 @@
+{
+  "categories": [
+    {
+      "name": "Wood-Fired Pizzas",
+      "items": [
+        { "name": "Margherita", "description": "Mozzarella and tomato base", "price_small": 75, "price_large": 85 },
+        { "name": "Regina", "description": "Ham & mushroom", "price_small": 79, "price_large": 99 },
+        { "name": "Pepperoni", "description": "Pepperoni, feta, mozzarella", "price_small": 95, "price_large": 115 },
+        { "name": "Hawaiian", "description": "Ham & pineapple", "price_small": 79, "price_large": 99 },
+        { "name": "Miss Piggy", "description": "Bacon, feta, avo", "price_small": 105, "price_large": 145 },
+        { "name": "Musharone", "description": "Black mushroom, rosemary, garlic", "price_small": 95, "price_large": 115 },
+        { "name": "Vegetarian", "description": "Mushroom, peppers, onion, olives, pineapple, asparagus, tomato", "price_small": 115, "price_large": 145 },
+        { "name": "BBQ Chicken", "description": "Grilled chicken, peppadews, BBQ sauce", "price_small": 105, "price_large": 145 },
+        { "name": "Meat Lovers", "description": "Steak, pepperoni, chorizo, bacon, ham, salami", "price_small": 125, "price_large": 155 },
+        { "name": "Siciliana", "description": "Anchovies, capers, olives", "price_small": 115, "price_large": 145 },
+        { "name": "The Katia", "description": "Ham, olives, creme fraiche", "price_small": 115, "price_large": 145 },
+        { "name": "Four Cheeses", "description": "Mozzarella, cheddar, parmesan, blue cheese", "price_small": 105, "price_large": 145 }
+      ]
+    },
+    {
+      "name": "Gourmet Pizzas",
+      "items": [
+        { "name": "Brie Me", "description": "Brie cheese, caramelised onion, rocket", "price_small": 140, "price_large": 185 },
+        { "name": "Butter Chicken", "description": "Butter chicken curry & coriander", "price_small": 140, "price_large": 185 },
+        { "name": "Pulled Pork", "description": "Pulled pork with cilantro or BBQ sauce", "price_small": 145, "price_large": 175 },
+        { "name": "Pulled Beef", "description": "Pulled beef with cilantro or BBQ sauce", "price_small": 145, "price_large": 175 },
+        { "name": "Nacho Chicken", "description": "Spicy chicken, jalapeño salsa, cilantro sauce", "price_small": 145, "price_large": 175 },
+        { "name": "Chilli Chicken Mayo", "description": "Chicken with chilli mayo", "price_small": 140, "price_large": 180 },
+        { "name": "The Charlie", "description": "Mushroom, chicken, mustard cream", "price_small": 145, "price_large": 175 }
+      ]
+    },
+    {
+      "name": "Pastas",
+      "items": [
+        { "name": "Spaghetti Bolognaise", "description": "Beef mince in Napolitana sauce", "price": 125 },
+        { "name": "Alfredo", "description": "Ham, mushroom, parmesan in creamy sauce", "price": 125 },
+        { "name": "Four Cheeses", "description": "Mozzarella, cheddar, blue cheese, parmesan", "price": 140 },
+        { "name": "Arabiata (Plane Jane)", "description": "Tomato, chilli, garlic", "price": 110 },
+        { "name": "Al Beefo", "description": "Beef strips, mushroom, olives, Napolitana", "price": 155 },
+        { "name": "Charlie’s Pasta", "description": "Chicken, onion, pepper, mushroom, creamy mustard sauce", "price": 150 },
+        { "name": "Creamy Basil Pesto", "description": "Add chicken extra R30", "price": 145 }
+      ]
+    },
+    {
+      "name": "Burgers",
+      "items": [
+        { "name": "Beef Burger", "description": "Homemade beef patty, lettuce, tomato & relish", "price": 115 },
+        { "name": "Chicken Burger", "description": "Chicken fillet, lettuce, tomato, chilli mayo", "price": 99 },
+        { "name": "Add Cheese", "description": "Cheddar slice", "price": 10 },
+        { "name": "Add Bacon / Avo / Mushrooms", "description": "Each topping charged", "price": 20 }
+      ]
+    },
+    {
+      "name": "Breakfast",
+      "items": [
+        { "name": "Early Bird", "description": "2 Eggs, 2 bacon, toast, hashbrown, tomato + Coffee", "price": 85 },
+        { "name": "Farmhouse", "description": "2 Eggs, 2 bacon, sausage, mushroom, hashbrown, toast, fries + Coffee", "price": 110 },
+        { "name": "Carb Conscious", "description": "2 poached eggs, haloumi, avo, grilled tomato", "price": 110 },
+        { "name": "Leon's Special", "description": "2 Toast, avo, 2 poached eggs & 2 bacon", "price": 110 },
+        { "name": "Mince on Toast", "description": "Savoury mince & 2 poached eggs", "price": 95 }
+      ]
+    },
+    {
+      "name": "Fries",
+      "items": [
+        { "name": "Plain Fries", "description": "Served with spice", "price": 30 },
+        { "name": "Cheesy Fries", "description": "Fries with melted cheese", "price": 52 },
+        { "name": "Cheesy Chilli Fries", "description": "With chilli & cheese", "price": 58 },
+        { "name": "Cheese & Bacon Fries", "description": "Fries topped with cheese and bacon", "price": 60 }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        { "name": "Belgian Waffle & Ice Cream", "description": "Choose caramel or Bar-One sauce", "price": 60 },
+        { "name": "Italian Kisses", "description": "Vanilla ice cream bonbons", "price": 50 },
+        { "name": "Cannoli & Cream", "description": "Crispy pastry tubes with sweet cream", "price": 55 }
+      ]
+    },
+    {
+      "name": "Kiddies Menu",
+      "items": [
+        { "name": "Kids Hawaiian Pizza", "description": "Small Hawaiian pizza", "price": 60 },
+        { "name": "Kids Margherita Pizza", "description": "Small margherita pizza", "price": 50 },
+        { "name": "Mac & Cheese", "description": "Cheesy macaroni pasta", "price": 40 },
+        { "name": "Chicken Strips & Chips", "description": "Crispy strips and golden fries", "price": 55 },
+        { "name": "100g Beef Burger", "description": "Kids size beef burger", "price": 68 }
+      ]
+    }
+  ]
+}
