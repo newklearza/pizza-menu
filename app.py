@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'digital-menu-demo'
 
 # Load menu data once at startup
-with open('charlies_menu.json', 'r', encoding='utf-8') as f:
+with open('charlies_menu_June2025.json', 'r', encoding='utf-8') as f:
     menu_data = json.load(f)
 
 

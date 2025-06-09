@@ -48,7 +48,24 @@
   </style>
 </head>
 
-<body class="bg-white-100 text-gray-800 p-4">
+<body class="bg-white text-gray-800 p-4">
+  <!-- Order Context Modal -->
+  <div id="order-context-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg max-w-md w-full shadow-lg text-center">
+      <h2 class="text-xl font-bold mb-4">Where are you ordering from?</h2>
+      <div class="mb-4">
+        <select id="order-type" class="w-full border p-2 rounded">
+          <option disabled selected value="">Select Order Type</option>
+          <option value="dine-in">🪑 Eat-in</option>
+          <option value="takeaway">🛍️ Takeaway (Collection)</option>
+          <option value="delivery">🏠 Delivery</option>
+        </select>
+      </div>
+      <div id="extra-fields" class="mb-4 hidden"></div>
+      <button id="confirm-order-context" class="bg-blue-600 text-white px-4 py-2 rounded">Start Order</button>
+    </div>
+  </div>
+
   <div class="max-w-5xl mx-auto">
     <header class="mb-6 flex items-center justify-between flex-wrap gap-4">
       <h1 class="text-4xl font-bold">🍕 Charlie's Pizzeria Menu</h1>
@@ -92,8 +109,7 @@
               <p class="font-medium mb-1">Options:</p>
               {% for option in item.options %}
               <label class="flex items-center mb-1">
-                <input type="checkbox" name="options" value="{{ option.name }}" data-price="{{ option.price }}"
-                       class="mr-2 option-checkbox">
+                <input type="checkbox" name="options" value="{{ option.name }}" data-price="{{ option.price }}" class="mr-2 option-checkbox">
                 {{ option.name }} (+R{{ option.price }})
               </label>
               {% endfor %}
@@ -119,8 +135,12 @@
     {% endfor %}
   </div>
 
-  <div id="floating-cart"
-       class="fixed bottom-5 right-5 text-white px-5 py-3 rounded-lg shadow-lg font-sans cursor-pointer z-50">
+  <!-- Floating Call Waiter Button -->
+  <div id="call-waiter-btn" class="fixed bottom-24 right-5 bg-pink-600 text-white px-4 py-2 rounded-lg shadow-md z-40 cursor-pointer hover:bg-pink-700">
+    🙋 Call Waiter
+  </div>
+
+  <div id="floating-cart" class="fixed bottom-5 right-5 text-white px-5 py-3 rounded-lg shadow-lg font-sans cursor-pointer z-50">
     🛒 Cart: <span id="cart-count">0</span> items | Total: R<span id="cart-total">0.00</span>
   </div>
 
@@ -135,5 +155,61 @@
   </div>
 
   <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("order-context-modal");
+      const orderType = document.getElementById("order-type");
+      const confirmBtn = document.getElementById("confirm-order-context");
+      const extraFields = document.getElementById("extra-fields");
+
+      orderType.addEventListener("change", () => {
+        const type = orderType.value;
+        extraFields.innerHTML = "";
+        extraFields.classList.remove("hidden");
+
+        if (type === "eat-in") {
+          extraFields.innerHTML = `
+            <label class="block text-left mb-1">Table Number:</label>
+            <input type="text" id="table-number" class="w-full border p-2 rounded" placeholder="e.g. 5 or A3">`;
+        } else if (type === "takeaway") {
+          extraFields.innerHTML = `
+            <label class="block text-left mb-1">Your Name:</label>
+            <input type="text" id="customer-name" class="w-full border p-2 rounded">`;
+        } else if (type === "delivery") {
+          extraFields.innerHTML = `
+            <label class="block text-left mb-1">Delivery Address:</label>
+            <input type="text" id="delivery-address" class="w-full border p-2 rounded mb-2">
+            <label class="block text-left mb-1">Contact Number:</label>
+            <input type="text" id="delivery-phone" class="w-full border p-2 rounded">`;
+        }
+      });
+
+      confirmBtn.addEventListener("click", () => {
+        const type = orderType.value;
+        const data = { type };
+
+        if (type === "eat-in") {
+          data.table = document.getElementById("table-number").value;
+        } else if (type === "takeaway") {
+          data.name = document.getElementById("customer-name").value;
+        } else if (type === "delivery") {
+          data.address = document.getElementById("delivery-address").value;
+          data.phone = document.getElementById("delivery-phone").value;
+        }
+
+        sessionStorage.setItem("order_context", JSON.stringify(data));
+        modal.classList.add("hidden");
+      });
+
+      if (!sessionStorage.getItem("order_context")) {
+        modal.classList.remove("hidden");
+      }
+
+      document.getElementById("call-waiter-btn").addEventListener("click", () => {
+        fetch("/call_waiter", { method: "POST" });
+        alert("A waiter has been notified. Thank you!");
+      });
+    });
+  </script>
 </body>
 </html>
