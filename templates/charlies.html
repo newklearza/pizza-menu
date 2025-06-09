@@ -56,7 +56,7 @@
       <div class="mb-4">
         <select id="order-type" class="w-full border p-2 rounded">
           <option disabled selected value="">Select Order Type</option>
-          <option value="dine-in">🪑 Eat-in</option>
+          <option value="eat-in">🪑 Eat-in</option>
           <option value="takeaway">🛍️ Takeaway (Collection)</option>
           <option value="delivery">🏠 Delivery</option>
         </select>
@@ -71,6 +71,9 @@
       <h1 class="text-4xl font-bold">🍕 Charlie's Pizzeria Menu</h1>
       <img src="{{ url_for('static', filename='images/charlies_logo.png') }}" alt="Charlie's Logo" class="w-40 h-auto" />
     </header>
+
+    <!-- Order Status Display -->
+    <div id="order-status" class="text-center text-white bg-pink-600 py-2 rounded mb-4 font-semibold"></div>
 
     {% for category in menu["categories"] %}
     <section class="mb-10">
@@ -199,16 +202,41 @@
 
         sessionStorage.setItem("order_context", JSON.stringify(data));
         modal.classList.add("hidden");
+        displayOrderStatus();
       });
 
       if (!sessionStorage.getItem("order_context")) {
         modal.classList.remove("hidden");
+      } else {
+        displayOrderStatus();
       }
 
       document.getElementById("call-waiter-btn").addEventListener("click", () => {
         fetch("/call_waiter", { method: "POST" });
         alert("A waiter has been notified. Thank you!");
       });
+
+      // Function to display order status on top of the menu
+      function displayOrderStatus() {
+        const context = JSON.parse(sessionStorage.getItem("order_context"));
+        const statusDiv = document.getElementById("order-status");
+
+        if (!context || !statusDiv) return;
+
+        let statusText = "Order Type: ";
+
+        if (context.type === "eat-in") {
+          statusText += `Eat-in at Table ${context.table || "?"}`;
+        } else if (context.type === "takeaway") {
+          statusText += `Takeaway for ${context.name || "?"}`;
+        } else if (context.type === "delivery") {
+          statusText += `Delivery to ${context.address || "?"}`;
+        } else {
+          statusText += "Not Specified";
+        }
+
+        statusDiv.textContent = statusText;
+      }
     });
   </script>
 </body>
